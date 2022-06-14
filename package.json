@@ -1,0 +1,26 @@
+{
+  "name": "ts-money",
+  "version": "1.0.0",
+  "description": "Example using node for TDD By Example by Kent Beck",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awarrington0895/ts-money.git"
+  },
+  "author": "Alex Warrington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awarrington0895/ts-money/issues"
+  },
+  "homepage": "https://github.com/awarrington0895/ts-money#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3",
+    "vitest": "^0.14.2"
+  }
+}

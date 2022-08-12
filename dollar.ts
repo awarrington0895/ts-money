@@ -1,5 +1,9 @@
 const isDefined = <T>(value: T): value is NonNullable<T> => value !== null && value !== undefined;
 
+const isDollar = (dollar: unknown): dollar is Dollar  => typeof dollar === 'object'
+    && isDefined(dollar)
+    && isDefined(dollar['amount']);
+
 export class Dollar {
     constructor(private amount: number) { }
 
@@ -8,16 +12,10 @@ export class Dollar {
     }
 
     equals(dollar: unknown): boolean {
-        if (!this.isDollar(dollar)) {
+        if (!isDollar(dollar)) {
             return false;
         }
 
         return dollar.amount === this.amount;
-    }
-
-    private isDollar(dollar: unknown): dollar is Dollar {
-        return typeof dollar === 'object'
-            && isDefined(dollar)
-            && isDefined(dollar['amount'])
     }
 }

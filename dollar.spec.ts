@@ -1,7 +1,7 @@
 import { describe, expect, it, test } from 'vitest';
-import { Dollar } from './currency';
+import { Dollar } from './dollar';
 
-describe('Currency', () => {
+describe('Dollar', () => {
     test('multiplication', () => {
         const five = new Dollar(5);
 

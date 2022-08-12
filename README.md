@@ -9,3 +9,4 @@
 - Money rounding?
 - ~~equals()~~
 - hashCode()
+- ~~5 CHF * 2 = 10 CHF~~

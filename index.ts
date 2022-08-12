@@ -1,1 +1,3 @@
-console.log("Hello world!");
+export class Dollar {
+    constructor(private readonly amount: number) {}
+}

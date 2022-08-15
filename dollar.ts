@@ -1,21 +1,11 @@
-const isDefined = <T>(value: T): value is NonNullable<T> => value !== null && value !== undefined;
+import { Money } from './money';
 
-const isDollar = (dollar: unknown): dollar is Dollar  => typeof dollar === 'object'
-    && isDefined(dollar)
-    && 'amount' in dollar;
-
-export class Dollar {
-    constructor(private amount: number) { }
+export class Dollar extends Money {
+    constructor(amount: number) { 
+        super(amount);
+    }
 
     times(multiplier: number): Dollar {
         return new Dollar(this.amount * multiplier);
-    }
-
-    equals(dollar: unknown): boolean {
-        if (!isDollar(dollar)) {
-            return false;
-        }
-
-        return dollar.amount === this.amount;
     }
 }

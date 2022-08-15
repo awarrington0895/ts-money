@@ -17,4 +17,8 @@ describe('Dollar', () => {
     test('equals should work with object that may not be a dollar', () => {
         expect(new Dollar(5).equals(10)).toBe(false);
     });
+
+    test('simple addition', () => {
+        
+    });
 });

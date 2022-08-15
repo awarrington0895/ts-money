@@ -14,4 +14,28 @@ export class Money {
 
         return money.amount === this.amount && money.currency === this.currency;
     }
+
+    static dollar(amount: number): Dollar {
+        return new Dollar(amount, 'USD');
+    }
+}
+
+export class Franc extends Money {
+    constructor(amount: number, currency: string) { 
+        super(amount, currency);
+    }
+
+    times(multiplier: number): Money {
+        return new Franc(this.amount * multiplier, this.currency);
+    }
+}
+
+export class Dollar extends Money {
+    constructor(amount: number, currency: string) { 
+        super(amount, currency);
+    }
+
+    times(multiplier: number): Money {
+        return new Dollar(this.amount * multiplier, this.currency);
+    }
 }

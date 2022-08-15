@@ -5,7 +5,7 @@ const isMoney = (money: unknown): money is Money => typeof money === 'object'
     && 'amount' in money;
 
 export class Money {
-    constructor(protected readonly amount: number, protected readonly currency: string) {}
+    constructor(protected readonly amount: number, protected readonly currency: string) { }
 
     equals(money: unknown): boolean {
         if (!isMoney(money)) {
@@ -24,8 +24,8 @@ export class Money {
     }
 }
 
-export class Franc extends Money {
-    constructor(amount: number, currency: string) { 
+class Franc extends Money {
+    constructor(amount: number, currency: string) {
         super(amount, currency);
     }
 
@@ -34,8 +34,8 @@ export class Franc extends Money {
     }
 }
 
-export class Dollar extends Money {
-    constructor(amount: number, currency: string) { 
+class Dollar extends Money {
+    constructor(amount: number, currency: string) {
         super(amount, currency);
     }
 

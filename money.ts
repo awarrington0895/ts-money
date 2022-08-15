@@ -5,13 +5,13 @@ const isMoney = (money: unknown): money is Money => typeof money === 'object'
     && 'amount' in money;
 
 export class Money {
-    constructor(protected readonly amount: number) {}
+    constructor(protected readonly amount: number, protected readonly currency: string) {}
 
     equals(money: unknown): boolean {
         if (!isMoney(money)) {
             return false;
         }
 
-        return money.amount === this.amount;
+        return money.amount === this.amount && money.currency === this.currency;
     }
 }

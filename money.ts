@@ -19,23 +19,11 @@ export class Money {
         return new Money(this.amount * multiplier, this.currency);
     }
 
-    static dollar(amount: number): Dollar {
-        return new Dollar(amount, 'USD');
+    static dollar(amount: number): Money {
+        return new Money(amount, 'USD');
     }
 
-    static franc(amount: number): Franc {
-        return new Franc(amount, 'CHF');
-    }
-}
-
-class Franc extends Money {
-    constructor(amount: number, currency: string) {
-        super(amount, currency);
-    }
-}
-
-class Dollar extends Money {
-    constructor(amount: number, currency: string) {
-        super(amount, currency);
+    static franc(amount: number): Money {
+        return new Money(amount, 'CHF');
     }
 }

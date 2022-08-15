@@ -2,7 +2,7 @@ const isDefined = <T>(value: T): value is NonNullable<T> => value !== null && va
 
 const isFranc = (franc: unknown): franc is Franc  => typeof franc === 'object'
     && isDefined(franc)
-    && isDefined(franc['amount']);
+    && 'amount' in franc;
 
 export class Franc {
     constructor(private amount: number) { }

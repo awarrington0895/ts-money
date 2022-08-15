@@ -10,3 +10,7 @@
 - ~~equals()~~
 - hashCode()
 - ~~5 CHF * 2 = 10 CHF~~
+
+### New todo list
+- $5 + 10 CHF = $10 if rate is 2:1
+- Money rounding?

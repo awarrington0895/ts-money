@@ -18,6 +18,10 @@ export class Money {
     static dollar(amount: number): Dollar {
         return new Dollar(amount, 'USD');
     }
+
+    static franc(amount: number): Franc {
+        return new Franc(amount, 'CHF');
+    }
 }
 
 export class Franc extends Money {
